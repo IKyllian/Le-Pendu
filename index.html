@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+            <script src="https://kit.fontawesome.com/f9678243a8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+            
+        <div id="player1" class="jumbotron">
+            <h1 class="text-center text-info"> Jeu Du Pendu </h1>
+            <div id="alertPlayer1" class="alert alert-danger float-right" role="alert">
+                    Veillez choisir un mot avec plus de 2 caractères
+            </div>
+            <h2> Joueur 1 </h2>
+            <label for="word">Veuillez choisir un mot<input class="mx-2" id="searchWord" type="text" name="word"></label>  
+            <input id ="confirmWord" class="btn btn-outline-info" type="button" value="Valider">
+        </div>
+        <div id="player2">
+            <nav class="navbar navbar-light bg-light" style="background-color: #e3f2fd;">
+                <a class="navbar-brand" href="/">
+                    <i class="fas fa-torii-gate"></i>
+                    Le-Pendu
+                </a>
+            </nav>
+            <div class="jumbotron py-5">
+                <h2 class="text-center text-info"> Joueur 2 </h2>
+                <div id="alertNoLetter" class="alert alert-danger float-right" role="alert">
+                        Veuillez ecrire une lettre
+                </div>
+                <div id="alertTooMuchLetter" class="alert alert-danger float-right" role="alert">
+                        Veuillez choisir uniquement une lettre
+                </div>
+                <div id="letterAlreadySearch" class="alert alert-warning float-right" role="alert">
+                    Vous avez deja chercher cette lettre ;)
+                </div>
+                <div id="victory" class="alert alert-success float-right" role="alert">
+                        Victoire!
+                </div>
+                <div id="defeat" class="alert alert-danger float-right" role="alert">
+                        Defaite, Votre nombre de points est à 0
+                </div>
+                <h5> Nombre de point(s) : <span id="point"> </span></h5>
+                <label class=" my-3" for="letter"> Veuillez choisir une lettre <input id="searchLetter" type="text" name="letter" > </label>
+                <input id ="confirmLetter" class="btn btn-outline-info" type="button" value="Valider">
+                <h5> Mot a trouver : <span id="secretWord"> </span></h5>
+                <a href="/" id="retry" class="btn btn-outline-info" type="button"> Rejouer </a>
+            </div>
+        </div>
+        
+        
+        <script src="index.js"></script>
+    </body>
+</html>
